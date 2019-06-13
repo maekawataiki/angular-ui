@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+@mixin custom-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+}
+
+@include mat-core();
+
+@import 'themes/light';
+@import 'themes/dark';
+@import 'themes/icicle';
+@import 'themes/volcano';

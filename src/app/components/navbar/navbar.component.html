@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <button mat-button routerLink="/">UI Demo</button>
+  <button mat-button routerLink="/components/button">Components</button>
+  <div class="spacer"></div>
+  <button mat-icon-button [matMenuTriggerFor]="themeMenu">
+    <mat-icon>format_color_fill</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-menu class="theme-picker-menu" #themeMenu="matMenu">
+  <mat-grid-list cols="2">
+    <mat-grid-tile *ngFor="let option of themeService.options">
+      <div mat-menu-item (click)="themeService.setTheme(option.name)">
+        <div class="theme-picker">
+          <mat-icon class="theme-chosen-icon" *ngIf="option.name === themeService.currentTheme">check_circle</mat-icon>
+          <div class="theme-picker-primary" [style.background]="option.primary"></div>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-menu>

@@ -1,21 +1,25 @@
-<mat-toolbar color="primary" class="mat-elevation-z8">
-  <button mat-button routerLink="/">UI Demo</button>
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px" y="0px" viewBox="0 0 250 250" class="angular-logo">
+      <g>
+        <g>
+          <polygon class="st0" points="125,153.4 100.3,153.4 88.6,182.6 88.6,182.6 66.9,182.6 66.8,182.6 125,52.1 125,52.2 125,52.2 
+          			125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,153.4 		" />
+          <polygon class="st0" points="108,135.4 125,135.4 125,135.4 125,94.5 		" />
+        </g>
+        <g class="st1">
+          <polygon class="st0" points="125,153.4 149.7,153.4 161.4,182.6 161.4,182.6 183.1,182.6 183.2,182.6 125,52.1 125,52.2 125,52.2 
+          			125,30 125,30 218.1,63.2 203.9,186.3 125,230 125,230 125,153.4 		" />
+          <polygon class="st0" points="142,135.4 125,135.4 125,135.4 125,94.5 		" />
+        </g>
+      </g>
+    </svg>
+    <span>Material Themes</span>
+  </button>
   <button mat-button routerLink="/components/button">Components</button>
   <div class="spacer"></div>
-  <button mat-icon-button [matMenuTriggerFor]="themeMenu">
-    <mat-icon>format_color_fill</mat-icon>
-  </button>
+  <app-color-picker></app-color-picker>
+  <app-dark-mode></app-dark-mode>
 </mat-toolbar>
 
-<mat-menu class="theme-picker-menu" #themeMenu="matMenu">
-  <mat-grid-list cols="2">
-    <mat-grid-tile *ngFor="let option of themeService.options">
-      <div mat-menu-item (click)="themeService.setTheme(option.name)">
-        <div class="theme-picker">
-          <mat-icon class="theme-chosen-icon" *ngIf="option.name === themeService.currentTheme">check_circle</mat-icon>
-          <div class="theme-picker-primary" [style.background]="option.primary"></div>
-        </div>
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-</mat-menu>

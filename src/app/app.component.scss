@@ -1,4 +1,13 @@
-mat-card {
-    margin: 2rem;
-    padding: 0;
+app-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.mat-app-background {
+    min-height: calc(100vh - 64px - 1rem);
+    padding-top: 64px;
+    padding-bottom: 1rem;
 }

@@ -1,9 +1,6 @@
 .icicle-theme {
-    color: $light-primary-text;
-    $primary: mat-palette($mat-blue, 100);
-    $accent: mat-palette($mat-amber, A400, A100, A700);
+    $primary: mat-palette($mat-blue, 200);
+    $accent: mat-palette($mat-light-blue, A400, A100, A700);
     $warn: mat-palette($mat-red);
-    $theme: mat-dark-theme($primary, $accent, $warn);
-    @include angular-material-theme($theme);
-    @include custom-theme($theme);
+    @include light-dark-theme($primary, $accent, $warn);
 }

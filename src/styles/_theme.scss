@@ -1,13 +1,29 @@
 @import '~@angular/material/theming';
 
+@mixin light-dark-theme($primary, $accent, $warn) {
+    $theme: mat-light-theme($primary, $accent, $warn);
+    @include angular-material-theme($theme);
+    @include custom-theme($theme);
+
+    &.dark {
+        $theme: mat-dark-theme($primary, $accent, $warn);
+        @include angular-material-theme($theme);
+        @include custom-theme($theme);
+    }
+}
+
 @mixin custom-theme($theme) {
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
+
+    .header {
+        background-color: mat-color($primary);
+    }
 }
 
 @include mat-core();
 
-@import 'themes/light';
-@import 'themes/dark';
+@import 'themes/indigo';
+@import 'themes/thunder';
 @import 'themes/icicle';
 @import 'themes/volcano';

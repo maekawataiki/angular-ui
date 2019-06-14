@@ -4,30 +4,49 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ThemeStorage {
-  private static storageKey = 'theme-storage-current-name';
+  private static themeKey = 'theme-storage-current-theme';
+  private static darkKey = 'theme-storage-current-dark';
 
   constructor() { }
 
   storeTheme(theme: string) {
     try {
-      window.localStorage[ThemeStorage.storageKey] = theme;
+      window.localStorage[ThemeStorage.themeKey] = theme;
     } catch {
-      console.error("Store Theme Error")
     }
   }
 
   getStoredThemeName(): string {
     try {
-      return window.localStorage[ThemeStorage.storageKey] || "";
+      return window.localStorage[ThemeStorage.themeKey] || "indigo-theme";
     } catch {
-      console.error("get Theme Error")
       return null;
     }
   }
 
-  clearStorage() {
+  storeDark(dark: string) {
     try {
-      window.localStorage.removeItem(ThemeStorage.storageKey);
-    } catch { }
+      window.localStorage[ThemeStorage.darkKey] = dark;
+    } catch {
+    }
+  }
+
+  getStoredDark(): string {
+    try {
+      var dark = window.localStorage[ThemeStorage.darkKey];
+      if (dark === undefined) dark = "";
+      return dark;
+    } catch {
+      return null;
+    }
+  }
+
+  clearCache() {
+    try {
+      window.localStorage.removeItem(ThemeStorage.themeKey);
+      window.localStorage.removeItem(ThemeStorage.darkKey);
+    } catch {
+      return null;
+    }
   }
 }

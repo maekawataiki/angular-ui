@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ThemeService } from 'src/app/core/services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +8,7 @@ import { ThemeService } from 'src/app/core/services/theme.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private themeService: ThemeService) { }
+  constructor() {}
 
   ngOnInit() {
   }

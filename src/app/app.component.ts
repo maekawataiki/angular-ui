@@ -8,7 +8,7 @@ import { ThemeService } from './core/services/theme.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private themeService: ThemeService) {
+  constructor(public themeService: ThemeService) {
   }
 
   ngOnInit() {

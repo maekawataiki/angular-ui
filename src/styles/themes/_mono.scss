@@ -1,0 +1,6 @@
+.mono-theme {
+    $primary: mat-palette($mat-gray, 700);
+    $accent: mat-palette($mat-gray, 900);
+    $warn: mat-palette($mat-red);
+    @include light-dark-theme($primary, $accent, $warn);
+}

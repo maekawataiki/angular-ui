@@ -11,9 +11,11 @@ export class ThemeService {
 
   public options: any = [
     { name: 'indigo-theme', label: 'Indigo', primary: '#3f51b5' },
-    { name: 'thunder-theme', label: 'Thunder', primary: '#FBC02D' },
+    { name: 'yellow-theme', label: 'Yellow', primary: '#FBC02D' },
     { name: 'icicle-theme', label: 'Icicle', primary: '#bbdefb' },
-    { name: 'volcano-theme', label: 'Volcano', primary: '#d50000' }
+    { name: 'red-theme', label: 'Red', primary: '#d50000' },
+    { name: 'green-theme', label: 'Green', primary: '#4CAF50' },
+    { name: 'mono-theme', label: 'Mono', primary: '#616161' }
   ]
 
   constructor(

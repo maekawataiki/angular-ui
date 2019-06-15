@@ -1,64 +1,25 @@
-.angular-logo {
-    height: 26px;
-    margin: 0 4px 3px 0;
-    vertical-align: middle;
-
-    .st0 {
-        fill: currentColor;
-    }
-
-    .st1 {
-        opacity: 0.9;
-    }
-}
-
-.theme-picker-menu {
-    .mat-menu-content {
-        padding: 8px;
-    }
-
-    [mat-menu-item] {
-        flex: 0 0 auto;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    .theme-picker {
-        position: relative;
-        width: 36px;
-        height: 36px;
-        margin: 6px;
-        border-radius: 50%;
-        overflow: hidden;
-
-        .theme-chosen-icon {
-            color: white;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            box-sizing: border-box;
-            border: 1px solid rgba(0, 0, 0, .2);
-            border-radius: 50%;
-        }
-    }
-
-    .theme-picker-primary {
-        width: 100%;
-        height: 100%;
-    }
-
+:host {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 mat-toolbar {
     height: 56px;
+
+    .angular-logo {
+        height: 26px;
+        margin: 0 4px 3px 0;
+        vertical-align: middle;
+
+        .st0 {
+            fill: currentColor;
+        }
+
+        .st1 {
+            opacity: 0.9;
+        }
+    }
 }

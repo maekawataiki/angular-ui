@@ -1,13 +1,14 @@
-app-navbar {
-    position: fixed;
-    top: 0;
+:host {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    bottom: 0;
     left: 0;
     right: 0;
-    z-index: 2;
 }
 
 .mat-app-background {
-    min-height: calc(100vh - 56px - 1rem);
-    padding-top: 56px;
-    padding-bottom: 1rem;
+    min-height: calc(100vh - 56px);
+    overflow: scroll;
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ThemeService } from 'src/app/core/services/theme.service';
+import { ThemeService } from 'src/app/core/theme/theme.service';
 
 @Component({
   selector: 'app-color-picker',

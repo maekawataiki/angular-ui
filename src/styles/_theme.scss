@@ -15,8 +15,22 @@
 @mixin custom-theme($theme) {
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
 
-    .header {
+    .primary-text {
+        color: mat-color($foreground, text);
+    }
+
+    .secondary-text {
+        color: mat-color($foreground, secondary-text);
+    }
+
+    .bg-card {
+        background: mat-color($background, 'card');
+    }
+
+    .bg-primary {
         background-color: mat-color($primary);
     }
 }

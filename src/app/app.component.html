@@ -1,5 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="mat-app-background" [ngClass]="[themeService.currentTheme, themeService.currentDark]">
-  <app-navbar class="mat-elevation-z6"></app-navbar>
+<div class="mat-app-background" (scroll)="onScroll($event)"
+  [ngClass]="[themeService.currentTheme, themeService.currentDark]">
+  <app-navbar [ngClass]="{ 'mat-elevation-z4': offset > 0 }"></app-navbar>
   <router-outlet></router-outlet>
 </div>
